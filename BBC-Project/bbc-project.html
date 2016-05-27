@@ -8,16 +8,15 @@
     <style type="text/css">
 
       #nav-bar {
-        background-color: #fffff;
         width:1000px;
         margin: 0 auto;
         height: 40px;
-        border-bottom: 1px black solid;
       }
 
       body {
         margin:0;
         padding:0;
+        font-family: Helvetica, Arial, sans-serif;
       }
 
       #header {
@@ -30,6 +29,43 @@
         margin-top: 8px;
         width: 100px;
         float:left;
+        margin-right: 8px;
+      }
+
+      .navbar-section {
+        float:left;
+        border-left: 1px #cccccc solid;
+        height: 100%;
+      }
+
+      #signin-image {
+        width:30px;
+        margin: 8px 12px;
+        float: left;
+      }
+
+      #signin-text {
+        font-size: 90%;
+        font-weight: bold;
+        position: relative;
+        top: 14px;
+        padding-right: 50px;
+      }
+
+      .navbar-menu {
+        font-size: 90%;
+        font-weight: bold;
+        padding: 13px 15px 0 15px;
+        height: 25px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position:absolute;
+      }
+
+      #dropdown-menu:hover .dropdown-content {
+        display: block;
       }
 
     </style>
@@ -42,10 +78,78 @@
 
       <img id="logo" src="images/bbc-logo.png">
 
-      <div></div>
+      <div id="signin" class="navbar-section">
+
+        <img id="signin-image"src="images/sign-in.png">
+
+        <span id="signin-text">Sign in</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>News</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>Sport</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>Weather</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>Shop</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>Earth</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <span>Travel</span>
+
+      </div>
+
+      <div class="navbar-section navbar-menu">
+
+        <button id="dropdown-menu">More</button>
+
+          <ul class="dropdown-content navbar-menu">
+            <li>Capital</li>
+            <li>Radio</li>
+            <li>Bitesize</li>
+            <li>Nature</li>
+            <li>Culture</li>
+            <li>CBBC</li>
+            <li>Music</li>
+            <li>Local</li>
+            <li>Autos</li>
+            <li>CBeebies</li>
+            <li>Arts</li>
+            <li>Future</li>
+            <li>Food</li>
+            <li>Make It Digital</li>
+            <li>TV</li>
+            <li>iWonder</li>
+            <li>Taster</li>
+          </ul>
+
+      </div>
 
     </div>
-    
+
     <div id="header">
 
       <h1 style="color: white">NEWS</h1>
