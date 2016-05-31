@@ -19,10 +19,20 @@
         font-family: Helvetica, Arial, sans-serif;
       }
 
-      #header {
+      #header-container {
         background-color: #bb1919;
-        height: 50%;
+        width: 100%;
+        height: 80px;
 
+      }
+
+      #header {
+        padding:0;
+        margin:0;
+        color:white;
+        font-size:40px;
+        font-weight: normal;
+        padding-top: 10px;
       }
 
       #logo {
@@ -64,8 +74,33 @@
         position:absolute;
       }
 
-      #dropdown-menu:hover .dropdown-content {
+      #dropdown-menu a:hover .dropdown-content {
         display: block;
+      }
+
+      #header2-container {
+        width:100%;
+        background-color: #a71a1e;
+      }
+
+      #header2-menu {
+        width: 1000px;
+        margin:0 auto;
+        height:30px;
+      }
+
+      #header2-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+        border-right: 1px #cccccc solid;
+        font-size: 13px;
+        position: relative;
+        top: 9px;
+      }
+
+      #header2-menu a:hover {
+        text-decoration: underline;
       }
 
     </style>
@@ -124,35 +159,69 @@
 
       <div class="navbar-section navbar-menu">
 
-        <button id="dropdown-menu">More</button>
+        <a href=""id="dropdown-menu">More</a>
 
-          <ul class="dropdown-content navbar-menu">
-            <li>Capital</li>
-            <li>Radio</li>
-            <li>Bitesize</li>
-            <li>Nature</li>
-            <li>Culture</li>
-            <li>CBBC</li>
-            <li>Music</li>
-            <li>Local</li>
-            <li>Autos</li>
-            <li>CBeebies</li>
-            <li>Arts</li>
-            <li>Future</li>
-            <li>Food</li>
-            <li>Make It Digital</li>
-            <li>TV</li>
-            <li>iWonder</li>
-            <li>Taster</li>
-          </ul>
+        <ul id="dropdown-content">
+          <li>Capital</li>
+          <li>Radio</li>
+          <li>Bitesize</li>
+          <li>Nature</li>
+          <li>Culture</li>
+          <li>CBBC</li>
+          <li>Music</li>
+          <li>Local</li>
+          <li>Autos</li>
+          <li>CBeebies</li>
+          <li>Arts</li>
+          <li>Future</li>
+          <li>Food</li>
+          <li>Make It Digital</li>
+          <li>TV</li>
+          <li>iWonder</li>
+          <li>Taster</li>
+        </ul>
 
       </div>
 
     </div>
 
-    <div id="header">
+    <div id="header-container">
 
-      <h1 style="color: white">NEWS</h1>
+        <h1 id="header">NEWS</h1>
+
+    </div>
+
+    <div id="header2-container">
+
+      <div id="header2-menu">
+
+        <a href="">Home</a>
+
+        <a href="">Video</a>
+
+        <a href="">World</a>
+
+        <a href="">US & Canada</a>
+
+        <a href="">UK</a>
+
+        <a href="">Business</a>
+
+        <a href="">Tech</a>
+
+        <a href="">Science</a>
+
+        <a href="">Health</a>
+
+        <a href="">Education</a>
+
+        <a href="">Entertainment & Arts</a>
+
+        <a href="">Video & Audio</a>
+
+        <a href="">More</a>
+
+      </div>
 
     </div>
 
