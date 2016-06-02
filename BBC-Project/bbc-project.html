@@ -27,6 +27,11 @@
       }
 
       #header {
+        width:1000px;
+        margin: 0 auto;
+      }
+
+      h1 {
         padding:0;
         margin:0;
         color:white;
@@ -127,6 +132,64 @@
         text-decoration: underline;
       }
 
+      .clear {
+        clear:both;
+      }
+
+      #page-container {
+        width:1000px;
+        margin: 0 auto;
+      }
+
+      h2 {
+
+        font-weight: normal;
+        margin-top: 40px;
+        font-size: 20px;
+        border-bottom: 2px solid #a71a1e;
+        width:105px;
+      }
+
+      h3 a {
+        text-decoration: none;
+        color: #1968a6;
+        font-size: 200%;
+      }
+
+      #article-summary {
+
+        color:#5a5a5a;
+        width:250px;
+        float: left;
+      }
+
+      #article-summary a {
+
+        text-decoration: none;
+        color:#a91717;
+        border-left: 1px solid #cccccc;
+        padding-left: 10px;
+      }
+
+      #article-container {
+
+        float:left;
+        width:670px;
+      }
+
+      #main-article-img {
+
+        width:400px;
+        position:relative;
+        margin-left: 20px;
+      }
+
+      #article-hr {
+
+        border-top: 1px solid #a71a1e;
+        width: 50px;
+      }
+
     </style>
 
   </head>
@@ -209,9 +272,15 @@
 
     </div>
 
+    <div class="clear"></div>
+
     <div id="header-container">
 
-        <h1 id="header">NEWS</h1>
+      <div id="header">
+
+        <h1>NEWS</h1>
+
+      </div>
 
     </div>
 
@@ -248,6 +317,35 @@
       </div>
 
     </div>
+
+    <div class="clear"</div>
+
+    <div id="page-container">
+
+      <div id="main-article">
+
+        <h2>Technology</h2>
+
+        <div id="article-container">
+
+          <h3><a href="http://www.bbc.com/news/technology-36396398">Paypal founder backed Hogan Gawker case</a></h3>
+
+          <div id="article-summary">
+
+            <p>David Folkenflik explains how Gawker faces an existential crisis over Hulk Hogan lawsuit</p>
+
+            <hr id="article-hr" align="left"/>
+
+          </div>
+
+          <img id="main-article-img" src="images/hulk-hogan.png">
+
+        </div>
+
+      </div>
+
+    </div>
+
 
   </body>
 
