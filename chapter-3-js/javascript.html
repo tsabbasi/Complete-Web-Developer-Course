@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>JavaScript</title>
+
+  </head>
+
+  <body>
+
+    <p id="helloWorld">Hello World!</p>
+
+    <button id="changeTextButton">Change text</button>
+
+    <p id="secondParagraph">Javascript is ...</p>
+
+    <button id="appendButton">Append text</button>
+
+    <script type="text/javascript">
+
+    document.getElementById("changeTextButton").onclick = function() {
+
+      document.getElementById('helloWorld').innerHTML = "I am so cool";
+
+    }
+
+    document.getElementById("appendButton").onclick = function() {
+
+      document.getElementById('secondParagraph').innerHTML += " awesome.";
+
+    }
+
+
+    </script>
+
+  </body>
+
+</html>
