@@ -17,6 +17,11 @@
 
     <button id="appendButton">Append text</button>
 
+    <p id="moreText">This is some text</p>
+
+    <button id="styleButton">Style text</button>
+
+
     <script type="text/javascript">
 
     document.getElementById("changeTextButton").onclick = function() {
@@ -28,6 +33,12 @@
     document.getElementById("appendButton").onclick = function() {
 
       document.getElementById('secondParagraph').innerHTML += " awesome.";
+
+    }
+
+    document.getElementById("styleButton").onclick = function() {
+
+      document.getElementById('moreText').style.color = "red";
 
     }
 
