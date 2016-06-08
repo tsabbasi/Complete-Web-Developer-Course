@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>jQuery</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <style>
+
+      #green-circle {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 10px;
+        float: left;
+      }
+
+      .red-square {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        float: left;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="green-circle"></div>
+
+    <iframe src="http://www.cnn.com"></iframe>
+
+    <script type="text/javascript">
+
+      $("#green-circle").hover(function() {
+
+        $("iframe").attr("src", "https://www.ecowebhosting.co.uk");
+
+      });
+
+
+
+      // if (typeof jQuery == "undefined") {
+      //
+      //   alert("jQuery is not installed");
+      //
+      // } else {
+      //
+      //   alert("jQuery is installed correctly!");
+      //
+      // }
+
+    </script>
+
+  </body>
+
+</html>
