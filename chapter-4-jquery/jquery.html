@@ -34,16 +34,48 @@
 
     <div id="green-circle"></div>
 
-    <iframe src="http://www.cnn.com"></iframe>
+    <div class="red-square"></div>
+
+    <div class="red-square"></div>
 
     <script type="text/javascript">
 
-      $("#green-circle").hover(function() {
+      // manipulating
+      // $("#green-circle").click(function() {
+      //
+      //   $("#green-circle").css("width", "400px");
+      //   $("#green-circle").css("background-color", "red");
+      //
+      //   // Getting the page body width
+      //   alert($("body").css("width"));
+      //
+      //   /** To get value of property:
+      //   alert($("#green-circle").css("background-color"));
+      //   **/
+      //
+      // });
 
-        $("iframe").attr("src", "https://www.ecowebhosting.co.uk");
+      // // disappearing
+      // $("div").click(function() {
+      //   // the element ineteracted with
+      //   $(this).css("display", "none");
+      //
+      // })
 
-      });
+      // alerting — attribute
+      $("div").click(function() {
 
+        if ($(this).attr("id") == "green-circle") {
+
+        alert("This is a " + $(this).attr("id"));
+
+      } else {
+
+        alert("This is a square");
+
+      }
+
+      })
 
 
       // if (typeof jQuery == "undefined") {
