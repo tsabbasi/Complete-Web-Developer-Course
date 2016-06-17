@@ -95,6 +95,7 @@
 
         float: left;
         width: 50%;
+        border-left: none;
 
       }
 
@@ -142,11 +143,11 @@
 
     <div id="bodyContainer">
 
-      <textarea id="htmlPanel" class="panel">Hello World</textarea>
+      <textarea id="htmlPanel" class="panel"><p id="paragraph">Hello World</p></textarea>
 
       <textarea id="cssPanel" class="panel hidden">p { color: orange; }</textarea>
 
-      <textarea id="javascriptPanel" class="panel hidden">alert("Hi there!");</textarea>
+      <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hi There!";</textarea>
 
       <iframe id="outputPanel" class="panel"></iframe>
 
@@ -154,6 +155,14 @@
 
 
     <script type="text/javascript">
+
+    function updateOutput() {
+
+      $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+
+      document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+
+    }
 
 
       $(".toggleButton").hover(function() {
@@ -176,17 +185,21 @@
 
         $("#" + panelId).toggleClass("hidden");
 
+        var numberOfActivePanels = 4 - $(".hidden").length;
+
+        $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+
       });
 
       $(".panel").height($(window).height() - $("#header").height() - 15);
 
       $(".panel").width(($(window).width() / 2) - 10);
 
-      $("iframe").contents().find("html").html($("#htmlPanel").val());
+      updateOutput();
 
       $("textarea").on('change keyup paste', function() {
 
-        $("iframe").contents().find("html").html($("#htmlPanel").val());
+        updateOutput();
 
       });
 
