@@ -3,7 +3,7 @@
 
   <head>
 
-    <title>jQuery</title>
+    <title>CodePlayer</title>
 
     <script type="text/javascript" src="jquery.min.js"></script>
 
@@ -104,6 +104,12 @@
 
       }
 
+      .hidden {
+
+        display: none;
+
+      }
+
 
     </style>
 
@@ -138,6 +144,10 @@
 
       <textarea id="htmlPanel" class="panel">Hello World</textarea>
 
+      <textarea id="cssPanel" class="panel hidden">p { color: orange; }</textarea>
+
+      <textarea id="javascriptPanel" class="panel hidden">alert("Hi there!");</textarea>
+
       <iframe id="outputPanel" class="panel"></iframe>
 
     </div>
@@ -161,6 +171,10 @@
         $(this).toggleClass("active");
 
         $(this).removeClass("highlightedButton");
+
+        var panelId = $(this).attr("id") + "Panel";
+
+        $("#" + panelId).toggleClass("hidden");
 
       });
 
