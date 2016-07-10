@@ -6,7 +6,7 @@
 
 	$body = "I think coding is so awesome. :)";
 
-	$headers = "From: tuba@mywebnapp.com";
+	$headers = "From: tubadev@tuba-dev.mywebnapp.com";
 
 	if (mail($emailTo, $subject, $body, $headers)) {
 
